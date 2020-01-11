@@ -9,6 +9,8 @@
 
     <div id="app">
         <h2>{{ name }}</h2>
+	<p>{{ description }}</p>
+	<div class="h3">${{price}}</div>
     </div>
 
 	
@@ -18,11 +20,18 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
+
+	// The data can be declared external from the Vue object.
+	var data = {
+	  "name": "Bamboo Thermal Ski Coat",
+	  "description": "You'll be the most environmentally conscious skier on the slopes - and the most stylish - wearing our fitted bamboo thermal ski coat, made from organic bamboo with recycled plastic down filling.",
+	  "image": "https://hplussport.com/wp-content/uploads/2016/12/ski-coat_LYNDA_29940.jpg",
+	  "price": 99
+}
+
         var app = new Vue({
             el:'#app',
-            data: {
-                name: 'Vue.js is AWESOME!'
-            }
+	    data: data
         });
     </script>
 </body>
